@@ -113,25 +113,68 @@ There is 3 characters.
 
 ## 2. 实践例子
 
-在这一节我们将结合Fusion Design的组件来说明如何实现异步内容更新的提醒，[点击此处](https://codesandbox.io/s/k010p7wy2v)浏览完整代码与页面demo。
+在这一节我们将结合Fusion Design的组件来说明如何实现异步内容更新的提醒、必填项、字段为空进行提示和格式，[点击此处](https://codesandbox.io/s/6xz4zj9pxn)浏览完整代码与页面demo。
 
 ```markup
-<Form>
-    <FormItem label="输入内容:">
-        <Input.TextArea
-        placeholder="分享生活点滴"
-        name="contents"
-        id="contents"
-        aria-describedby="inputInfo" 
-        aria-required="true"
-        onChange={this.sizeCount}
-        />
+state = {
+    size: 'medium',
+    textTip: ''
+}
+
+changeHandle = (v, event)=>{
+    const sign = event.target.name
+    if(sign && ['username', 'remark'].includes(sign)) { 
+        if(!v) { 
+            this.setState({textTip: '不能为空，请输入有效字符'});
+        }else {
+            const ariaText = '您输入的内容为:' + (!v ? "": v) + '共' + (!v ? 0 : v.length) + '字符';
+            this.setState({textTip: ariaText});
+        }
+    }else if(sign && sign === 'password') { 
+        if(!v) { 
+            this.setState({textTip: "密码不能为空，请输入有效字符"});
+        }else {
+            const ariaText = '输入密码共' + (!v ? 0 : v.length) + '字符';
+            this.setState({textTip: ariaText});
+        }
+    }else if(event.target.type == 'checkbox'){
+        const ariaText = (v.length === 0) ? "您没有选择语言" : ("您选择的语言为:" + v.join(','));
+        this.setState({textTip: ariaText});
+    }
+}
+
+<Form {...formItemLayout} size={this.state.size} style={{maxWidth: '500px'}}>
+    <FormItem 
+        required 
+        label="username:"
+        aria-describedby="aria"    
+    >
+        <Input  placeholder="Please enter your user name" id="username" name="username"   onChange={ this.changeHandle }   />
     </FormItem>
 
-    <FormItem label=" ">
-        <span id="inputInfo" aria-live="polite">
-        已输入字符:
+    <FormItem
+        required 
+        label="Password:"
+        aria-describedby="aria"
+    >
+        <Input htmlType="password"  placeholder="Please enter your password" id="password" name="password" onChange={ this.changeHandle }/>
+    </FormItem>
+
+    <FormItem wrapperCol={{ offset: 2 }} label=" ">
+        <span id="aria" aria-live="polite">
+            <span aria-label={this.state.textTip} />
         </span>
+
+        <Form.Submit
+            validate
+            type="primary"
+            onClick={this.submitHandle}
+            style={{ marginRight: 4 }}
+        >
+            Submit
+        </Form.Submit>
+
+        <Form.Reset style={{ marginLeft: 100 }}>Reset</Form.Reset>
     </FormItem>
 </Form>
 ```
