@@ -116,7 +116,7 @@ There is 3 characters.
 在这一节我们将结合Fusion Design的组件来说明如何实现表单的无障碍支持,我们将对fusion组件以下几个方面的设计：
 
 * `读取label文本`
-  * fusion内置label与与input的id进行绑定，开发者只需要在FormItem组件子元素中设置name即可，例如：`Input`,`TextArea`， 其他子元素需要设置aria-label或者aria-describedby。例如:`Checkbox`
+  * fusion内置label与与input的id进行绑定，开发者只需要在FormItem组件子元素中设置name即可，例如：`Input`,`TextArea`， 或设置aria-label或者aria-describedby。例如:`Checkbox`
 * `必填项` - 内置\*号或使用aria-required属性设置为必填
   * 在FormItem组件中设置label属性，在子组件中设置name,组件内部会实现label标签与组件自动关联，设置required属性会在label文本中添加\*号，例如`Input`, `TextArea`等
   * 在组件中设置aria-required属性，提示为“必需”，例如`DatePicker`, `Checkbox`等
