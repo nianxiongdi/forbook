@@ -121,7 +121,7 @@ There is 3 characters.
   * 在FormItem组件中设置label属性，在子组件中设置name,组件内部会实现label标签与组件自动关联，设置required属性会在label文本中添加\*号，例如`Input`, `TextArea`等
   * 在组件中设置aria-required属性，提示为“必需”，例如`DatePicker`, `Checkbox`等
 * `格式`
-  * 对于表单项，需提示用户输入数据的格式，使用`aria-label`属性。例如日期: `<DatePicker aria-label="YYYY/MM/DD" />`
+  * 对于表单项，需提示用户正确输入数据的格式，使用`aria-label`属性。例如日期: `<DatePicker aria-label="YYYY/MM/DD" />`
 * `异步内容更新的提醒`
   * fusion为做到表单更好的支持无障碍，对于输入的内容给予用户提示。例如：`Input组件`，当用户输入‘123456’，开启屏幕阅读去会提示：“您输入的内容为:123456共6字符”。当用户删除完所有的字符，则提示：“不能为空，请输入有效字符“。
 
