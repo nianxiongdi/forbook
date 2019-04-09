@@ -45,7 +45,7 @@
 
 * [ ] 非语义标签的键盘事件捕获，要使用onkeydown ，IE浏览器不会为非字母数字键触发按键事件
 * [ ] 代码的逻辑顺序与显示的顺序要保持一致
-* [ ] 需要能跳过页面重复出现的菜单，请参考上文[跳过多个页面重复出现的导航栏](https://github.com/nianxiongdi/forbook/tree/6817f4a00573b45a1c16b322839f5bce266e973a/site/zh-cn/a11y/content-creation-link/page1.md)
+* [ ] 需要能跳过页面重复出现的菜单，请参考上文[跳过多个页面重复出现的导航栏](https://github.com/nianxiongdi/forbook/tree/24f3e7b5db16eb942be436e547e6700f3519ebae/site/zh-cn/a11y/content-creation-link/page1.md)
 * [ ] 关于元素的隐藏，请参考[详情](content-creation/page2.md)
 
 ### 1.2 语义化标签
