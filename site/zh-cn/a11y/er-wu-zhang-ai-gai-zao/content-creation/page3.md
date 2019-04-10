@@ -114,16 +114,24 @@ There is 3 characters.
 ## 2. 实践例子
 
 在这一节我们将结合Fusion Design的组件来说明如何实现表单的无障碍支持,我们将对fusion组件以下几个方面的设计：
+* `输入框的描述` - 当屏幕阅读器聚焦在输入框上面，可以读取label标签文本或解释性描述。具体用法，请参考以下例子。
+    * html中的绑定方式为label标签中for与输入框的id进行绑定，屏幕阅读器就可以读取label文本。以下介绍Fusion的实现方式：
+        * 在FormItem设置label属性和子组件设置name属性，即可实现绑定，原理也是label中for与输入框id进行绑定。 
+    * 设置`placeholder`进行对输入框的描述,具体用法请参照[官网](https://fusion.design/component)。
+    * 也可以设置aria-label对输入框进行解释性描述。
 
-* `读取label文本`
-  * fusion内置label与与input的id进行绑定，开发者只需要在FormItem组件子元素中设置name即可，例如：`Input`,`TextArea`， 或设置aria-label或者aria-describedby。例如:`Checkbox`
-* `必填项` - 内置\*号或使用aria-required属性设置为必填
-  * 在FormItem组件中设置label属性，在子组件中设置name,组件内部会实现label标签与组件自动关联，设置required属性会在label文本中添加\*号，例如`Input`, `TextArea`等
-  * 在组件中设置aria-required属性，提示为“必需”，例如`DatePicker`, `Checkbox`等
-* `格式`
-  * 对于表单项，需提示用户正确输入数据的格式，使用`aria-label`属性。例如日期: `<DatePicker aria-label="YYYY/MM/DD" />`
-* `异步内容更新的提醒`
-  * fusion为做到表单更好的支持无障碍，对于输入的内容给予用户提示。例如：`Input组件`，当用户输入‘123456’，开启屏幕阅读去会提示：“您输入的内容为:123456共6字符”。当用户删除完所有的字符，则提示：“不能为空，请输入有效字符“。
+* `必填项` - 当屏幕阅读去读取文本框时， 提示为*或必填
+    * 关于输入框的label标签中添加*号，以下两点建议：
+        * 在`FormItem`组件中设置label和require，就是出现*号
+        * 若想让屏幕阅读器读取*号，请参考上文`输入框的描述`.例如：`input`
+    * 对于一些组件，在组件中设置aria-required属性，提示为“必需”，例如`DatePicker`, `Radio`等
+
+* `格式` - 提示用户输入数据的格式
+    * 对于表单项，需提示用户输入数据的格式，Funsion提供格式的验证，可以使用`aria-label`属性指定格式。例如日期: `<DatePicker aria-label="按照YYYY/MM/DD格式输入日期" />`
+
+* `异步内容更新的提醒` - Fusion结合aria-*属性实现异步更新提醒
+    * Fusion为做到表单更好的支持无障碍，对于输入的内容给予用户提示。例如：Input组件，当用户输入‘123456’，开启屏幕阅读去会提示：“您输入的内容为:123456共6字符”。当用户删除完所有的字符，则提示：“不能为空，请输入有效字符“。
+
 
 根据以上几个方面设计，为开发者提供完整demo请[点击此处](https://codesandbox.io/s/6xz4zj9pxn)，核心代码如下。
 
