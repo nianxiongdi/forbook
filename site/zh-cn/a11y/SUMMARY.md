@@ -1,6 +1,5 @@
 # fusion无障碍指引
-
-* [fusion无障碍指引](README.md)
+ 
 * [一、 背景介绍](yi-bei-jing-jie-shao/README.md)
   * [1. 无障碍背景](yi-bei-jing-jie-shao/basics.md)
   * [2. WAI-ARIA](yi-bei-jing-jie-shao/wai-aria.md)
