@@ -57,7 +57,7 @@
 
 `autofocus`是一个`boolean`属性，默认值为`true`，规定当页面加载时设置了该属性为`true`的元素自动获得焦点。
 
-```text
+```markup
 <button type="button" autofocus>按钮文本</button>
 ```
 

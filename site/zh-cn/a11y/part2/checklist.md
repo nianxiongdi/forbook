@@ -6,7 +6,7 @@
 
 ### 1.1 常规
 
-* [ ] 设置 lang 让屏幕阅读器选择语言去读取，lang 参数值遵循[ISO\_639-1 规则](https://zh.wikipedia.org/wiki/ISO_639-1)，
+* [ ] 设置 lang 让屏幕阅读器选择语言去读取，lang 参数值遵循[ISO\_639-1 规则](https://zh.wikipedia.org/wiki/ISO_639-1)。
 
   ```markup
   <html lang="en"></html>
@@ -45,7 +45,7 @@
 
 * [ ] 非语义标签的键盘事件捕获，要使用onkeydown ，IE浏览器不会为非字母数字键触发按键事件
 * [ ] 代码的逻辑顺序与显示的顺序要保持一致
-* [ ] 需要能跳过页面重复出现的菜单，请参考上文[跳过多个页面重复出现的导航栏](https://github.com/nianxiongdi/forbook/tree/cd51f4d9092c4a54f6b621e7ff7508fa3684369e/site/zh-cn/a11y/content-creation-link/page1.md)
+* [ ] 需要能跳过页面重复出现的菜单，请参考上文[跳过多个页面重复出现的导航栏](https://github.com/alibaba-fusion/next/tree/56cf9e09e2cc0477e43a149dcc516c8e0a89c228/site/zh-cn/a11y/content-creation-link/page1.md)
 * [ ] 关于元素的隐藏，请参考[详情](content-creation/page2.md)
 
 ### 1.2 语义化标签

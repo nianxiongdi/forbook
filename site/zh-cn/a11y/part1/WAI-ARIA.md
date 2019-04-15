@@ -16,7 +16,7 @@
 
 ### 2.1 `ARIA`的组成
 
-```text
+```javascript
 <div role="button" aria-pressed="false">I'm a button</div>
 ```
 
@@ -89,7 +89,7 @@
 
 开发者需要确保所有的`role`的取值都是有效的，有效的`role`取值可[参见上文内容](wai-aria.md#211-role)，比如：
 
-```text
+```markup
 <div role="button">I'm a button</div>            // 正确使用案例
 <div role="bigbutton">I'm a big button</div>     // 错误使用案例，"bigbutton"不是一个 ARIA role
 ```
@@ -98,7 +98,7 @@
 
 开发者在使用role的过程中需要注意，一些`role`必须被包含在特定的父元素中，一些`role`必须包含特定的子元素。比如：
 
-```text
+```markup
 // 正确使用案例，role=listitem 包含在 role=list 元素中
 <div role="list"> 
     <span role="listitem">Rainbow Trout</span> 
@@ -107,7 +107,7 @@
 </div>
 ```
 
-```text
+```markup
 // 错误使用案例，role=listitem 未包含在 role=list 元素中
 <div> 
     <span role="listitem">Rainbow Trout</span> 
@@ -120,13 +120,13 @@
 
 比如开发者想构建一个标签，可以按如下方式构建：
 
-```text
+```markup
 <div role=tab><h2>heading tab</h2></div>
 ```
 
 但是不能按照如下方式构建:
 
-```text
+```markup
 <h2 role=tab>heading tab</h2>    // 错误案例，改变了原生语义
 ```
 
@@ -134,7 +134,7 @@
 
 比如下面添加了`role`是无用的，会带来信息的冗余：
 
-```text
+```markup
 <button role="button">press me</button>
 ```
 
@@ -142,7 +142,7 @@
 
 开发者不能使用一个不存在或者错误拼写的`aria-*`，比如：
 
-```text
+```javascript
 aria-hidden="true"      // 正确使用案例
 aria-hide="true"        // 错误使用案例，不存在该属性
 ```
@@ -164,7 +164,7 @@ aria-hide="true"        // 错误使用案例，不存在该属性
 
 开发者在使用`aria-*`时，需要对其赋予有效的值，比如：
 
-```text
+```javascript
 aria-hidden="true"      // 正确使用案例
 aria-hidden="yes"       // 错误使用案例，aria-hidden的可选值中无"yes"选择
 ```
@@ -180,7 +180,7 @@ aria-hidden="yes"       // 错误使用案例，aria-hidden的可选值中无"ye
 
 我们可以在这张[表格](http://whatsock.com/training/matrices/)（建议保存这张表格以备日后频繁查询）中找到这些必须提供特定`aria-*`的`role`的详细说明，比如对于`role=heading`，它有一个必须要求提供的属性`aria-level`：
 
-```text
+```markup
 <div role="heading" aria-level="1">I'm a heading</div>    // 正确使用案例
 <div role="heading" >I'm a heading</div>                  // 错误使用案例，未提供必需的aria-level属性
 ```
@@ -189,7 +189,7 @@ aria-hidden="yes"       // 错误使用案例，aria-hidden的可选值中无"ye
 
 开发者在给`aria-labelledby`属性赋值时，应注意与DOM元素中的id值对应，比如：
 
-```text
+```markup
 <div id="test_one">it's a test</div>
 
 <input type="text" aria-labelledby="test_one"></input>    // 正确使用案例
@@ -204,7 +204,7 @@ aria-hidden="yes"       // 错误使用案例，aria-hidden的可选值中无"ye
 
 `role=presentation`或其同义词`role=none`，表示在它所在的元素中删除语义，在可聚焦元素上使用`role="presentation"`或`aria-hidden="true"`会导致该元素失去焦点，比如：
 
-```text
+```markup
 <button role=presentation>press me</button>     // 错误使用案例
 <button aria-hidden="true">press me</button>    // 错误使用案例
 ```
@@ -213,7 +213,7 @@ aria-hidden="yes"       // 错误使用案例，aria-hidden的可选值中无"ye
 
 重复的`id`是非常常见的一个错误，分配相同的`id`值会导致辅助技术忽略第二个实例，破坏内容的可访问性。
 
-```text
+```markup
 // 错误案例，使用了重复的id，应该修改其中的一个id值
 <div role="button" id="hibutton">click me</div>
 <div role="button" id="hibutton">click me again</div>
