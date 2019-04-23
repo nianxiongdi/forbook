@@ -24,17 +24,17 @@
   <video controls>
   <source src="movie.mp4" type="video/mp4" />
   <track
-      label="English Captions"
-      kind="captions"
-      srclang="eN"
-      src="captions.vtt"
-      default
+  label="English Captions"
+  kind="captions"
+  srclang="eN"
+  src="captions.vtt"
+  default
   />
   <track
-      label="Subtitulos en español"
-      kind="captions"
-      srclang="es"
-      src="subs.vtt"
+  label="Subtitulos en español"
+  kind="captions"
+  srclang="es"
+  src="subs.vtt"
   />
   </video>
   ```
@@ -46,7 +46,7 @@
 * [ ] 非语义标签的键盘事件捕获，要使用onkeydown ，IE浏览器不会为非字母数字键触发按键事件
 * [ ] 代码的逻辑顺序与显示的顺序要保持一致
 * [ ] 需要能跳过页面重复出现的菜单，请参考上文[跳过多个页面重复出现的导航栏](https://github.com/alibaba-fusion/next/tree/56cf9e09e2cc0477e43a149dcc516c8e0a89c228/site/zh-cn/a11y/content-creation-link/page1.md)
-* [ ] 关于元素的隐藏，请参考[详情](content-creation/page2.md)
+* [ ] 关于元素的隐藏，请参考[详情](https://github.com/nianxiongdi/forbook/tree/507b98a01c77ffe354b6591b7f6c9b8f18f6854c/site/zh-cn/a11y/part2/content-creation/page2.md)
 
 ### 1.2 语义化标签
 
@@ -63,7 +63,7 @@
 
 * [ ] 每个页面，有且仅有一个`<main>`标签或 role="main"的元素，并且为页面的主题内容
 * [ ] 列表结构尽量使用 ul、ol、dl 结构组织内容
-* [ ] 不使用语义化标签时，合理使用了`aria-*`与`role`来描述元素，请[参考](../yi-bei-jing-jie-shao/wai-aria.md)
+* [ ] 不使用语义化标签时，合理使用了`aria-*`与`role`来描述元素，请[参考](https://github.com/nianxiongdi/forbook/tree/507b98a01c77ffe354b6591b7f6c9b8f18f6854c/site/zh-cn/a11y/yi-bei-jing-jie-shao/wai-aria.md)
 * [ ] 要正确使用如下标签：
 
   ```text

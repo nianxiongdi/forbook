@@ -87,7 +87,7 @@
 
 #### 1. `role`必须使用有效的值
 
-开发者需要确保所有的`role`的取值都是有效的，有效的`role`取值可[参见上文内容](wai-aria.md#211-role)，比如：
+开发者需要确保所有的`role`的取值都是有效的，有效的`role`取值可[参见上文内容](https://github.com/nianxiongdi/forbook/tree/507b98a01c77ffe354b6591b7f6c9b8f18f6854c/site/zh-cn/a11y/part1/wai-aria.md#211-role)，比如：
 
 ```markup
 <div role="button">I'm a button</div>            // 正确使用案例

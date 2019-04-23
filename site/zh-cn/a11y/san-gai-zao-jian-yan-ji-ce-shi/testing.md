@@ -45,7 +45,7 @@
 
   使用Tab在页面的可聚焦元素上切换，使用 shift+Tab 切回上一聚焦元素。
 
-* [ ] 能否跳过导航栏，详情点击[这里](../er-wu-zhang-ai-gai-zao/content-creation/page1.md)
+* [ ] 能否跳过导航栏，详情点击[这里](../er-wu-zhang-ai-gai-zao/4.-bu-zhou-san-ye-mian-qi-ta-nei-rong/page1.md)
 
   跳过导航栏对有运动障碍的人很有意义
 
