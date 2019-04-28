@@ -30,6 +30,8 @@
 
     
         
+        <link rel="stylesheet" href="../../style/website.css">
+        
     
 
         
@@ -489,23 +491,99 @@ There is 3 characters.
     aria-live=&quot;polite&quot;&gt;
 </code></pre>
 <h2 id="2-&#x5B9E;&#x8DF5;&#x4F8B;&#x5B50;">2. &#x5B9E;&#x8DF5;&#x4F8B;&#x5B50;</h2>
-<p>&#x5728;&#x8FD9;&#x4E00;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x7ED3;&#x5408;Fusion Design&#x7684;&#x7EC4;&#x4EF6;&#x6765;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x5F02;&#x6B65;&#x5185;&#x5BB9;&#x66F4;&#x65B0;&#x7684;&#x63D0;&#x9192;&#xFF0C;<a href="https://codesandbox.io/s/k010p7wy2v" target="_blank">&#x70B9;&#x51FB;&#x6B64;&#x5904;</a>&#x6D4F;&#x89C8;&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x4E0E;&#x9875;&#x9762;demo&#x3002;</p>
-<pre><code class="lang-markup">&lt;Form&gt;
-    &lt;FormItem label=&quot;&#x8F93;&#x5165;&#x5185;&#x5BB9;:&quot;&gt;
-        &lt;Input.TextArea
-        placeholder=&quot;&#x5206;&#x4EAB;&#x751F;&#x6D3B;&#x70B9;&#x6EF4;&quot;
-        name=&quot;contents&quot;
-        id=&quot;contents&quot;
-        aria-describedby=&quot;inputInfo&quot; 
-        aria-required=&quot;true&quot;
-        onChange={this.sizeCount}
-        /&gt;
+<p>&#x5728;&#x8FD9;&#x4E00;&#x8282;&#x6211;&#x4EEC;&#x5C06;&#x7ED3;&#x5408;Fusion Design&#x7684;&#x7EC4;&#x4EF6;&#x6765;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x8868;&#x5355;&#x7684;&#x65E0;&#x969C;&#x788D;&#x652F;&#x6301;,&#x6211;&#x4EEC;&#x5C06;&#x5BF9;fusion&#x7EC4;&#x4EF6;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x65B9;&#x9762;&#x7684;&#x8BBE;&#x8BA1;&#xFF1A;</p>
+<ul>
+<li><p><code>&#x8F93;&#x5165;&#x6846;&#x7684;&#x63CF;&#x8FF0;</code> - &#x5F53;&#x5C4F;&#x5E55;&#x9605;&#x8BFB;&#x5668;&#x805A;&#x7126;&#x5728;&#x8F93;&#x5165;&#x6846;&#x4E0A;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;label&#x6807;&#x7B7E;&#x6587;&#x672C;&#x6216;&#x89E3;&#x91CA;&#x6027;&#x63CF;&#x8FF0;&#x3002;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x4EE5;&#x4E0B;&#x4F8B;&#x5B50;&#x3002;</p>
+<ul>
+<li>html&#x4E2D;&#x7684;&#x7ED1;&#x5B9A;&#x65B9;&#x5F0F;&#x4E3A;label&#x6807;&#x7B7E;&#x4E2D;for&#x4E0E;&#x8F93;&#x5165;&#x6846;&#x7684;id&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#xFF0C;&#x5C4F;&#x5E55;&#x9605;&#x8BFB;&#x5668;&#x5C31;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;label&#x6587;&#x672C;&#x3002;&#x4EE5;&#x4E0B;&#x4ECB;&#x7ECD;Fusion&#x7684;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#xFF1A;<ul>
+<li>&#x5728;FormItem&#x8BBE;&#x7F6E;label&#x5C5E;&#x6027;&#x548C;&#x5B50;&#x7EC4;&#x4EF6;&#x8BBE;&#x7F6E;name&#x5C5E;&#x6027;&#xFF0C;&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x7ED1;&#x5B9A;&#xFF0C;&#x539F;&#x7406;&#x4E5F;&#x662F;label&#x4E2D;for&#x4E0E;&#x8F93;&#x5165;&#x6846;id&#x8FDB;&#x884C;&#x7ED1;&#x5B9A;&#x3002; </li>
+</ul>
+</li>
+<li>&#x8BBE;&#x7F6E;<code>placeholder</code>&#x8FDB;&#x884C;&#x5BF9;&#x8F93;&#x5165;&#x6846;&#x7684;&#x63CF;&#x8FF0;,&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x8BF7;&#x53C2;&#x7167;<a href="https://fusion.design/component" target="_blank">&#x5B98;&#x7F51;</a>&#x3002;</li>
+<li>&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;aria-label&#x5BF9;&#x8F93;&#x5165;&#x6846;&#x8FDB;&#x884C;&#x89E3;&#x91CA;&#x6027;&#x63CF;&#x8FF0;&#x3002;</li>
+</ul>
+</li>
+<li><p><code>&#x5FC5;&#x586B;&#x9879;</code> - &#x5F53;&#x5C4F;&#x5E55;&#x9605;&#x8BFB;&#x53BB;&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x6846;&#x65F6;&#xFF0C; &#x63D0;&#x793A;&#x4E3A;*&#x6216;&#x5FC5;&#x586B;</p>
+<ul>
+<li>&#x5173;&#x4E8E;&#x8F93;&#x5165;&#x6846;&#x7684;label&#x6807;&#x7B7E;&#x4E2D;&#x6DFB;&#x52A0;*&#x53F7;&#xFF0C;&#x4EE5;&#x4E0B;&#x4E24;&#x70B9;&#x5EFA;&#x8BAE;&#xFF1A;<ul>
+<li>&#x5728;<code>FormItem</code>&#x7EC4;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;label&#x548C;require&#xFF0C;&#x5C31;&#x662F;&#x51FA;&#x73B0;*&#x53F7;</li>
+<li>&#x82E5;&#x60F3;&#x8BA9;&#x5C4F;&#x5E55;&#x9605;&#x8BFB;&#x5668;&#x8BFB;&#x53D6;*&#x53F7;&#xFF0C;&#x8BF7;&#x53C2;&#x8003;&#x4E0A;&#x6587;<code>&#x8F93;&#x5165;&#x6846;&#x7684;&#x63CF;&#x8FF0;</code>.&#x4F8B;&#x5982;&#xFF1A;<code>input</code></li>
+</ul>
+</li>
+<li>&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x7EC4;&#x4EF6;&#xFF0C;&#x5728;&#x7EC4;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E;aria-required&#x5C5E;&#x6027;&#xFF0C;&#x63D0;&#x793A;&#x4E3A;&#x201C;&#x5FC5;&#x9700;&#x201D;&#xFF0C;&#x4F8B;&#x5982;<code>DatePicker</code>, <code>Radio</code>&#x7B49;</li>
+</ul>
+</li>
+<li><p><code>&#x683C;&#x5F0F;</code> - &#x63D0;&#x793A;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;</p>
+<ul>
+<li>&#x5BF9;&#x4E8E;&#x8868;&#x5355;&#x9879;&#xFF0C;&#x9700;&#x63D0;&#x793A;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#xFF0C;Funsion&#x63D0;&#x4F9B;&#x683C;&#x5F0F;&#x7684;&#x9A8C;&#x8BC1;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>aria-label</code>&#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x683C;&#x5F0F;&#x3002;&#x4F8B;&#x5982;&#x65E5;&#x671F;: <code>&lt;DatePicker aria-label=&quot;&#x6309;&#x7167;YYYY/MM/DD&#x683C;&#x5F0F;&#x8F93;&#x5165;&#x65E5;&#x671F;&quot; /&gt;</code></li>
+</ul>
+</li>
+<li><p><code>&#x5F02;&#x6B65;&#x5185;&#x5BB9;&#x66F4;&#x65B0;&#x7684;&#x63D0;&#x9192;</code> - Fusion&#x7ED3;&#x5408;aria-*&#x5C5E;&#x6027;&#x5B9E;&#x73B0;&#x5F02;&#x6B65;&#x66F4;&#x65B0;&#x63D0;&#x9192;</p>
+<ul>
+<li>Fusion&#x4E3A;&#x505A;&#x5230;&#x8868;&#x5355;&#x66F4;&#x597D;&#x7684;&#x652F;&#x6301;&#x65E0;&#x969C;&#x788D;&#xFF0C;&#x5BF9;&#x4E8E;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x7ED9;&#x4E88;&#x7528;&#x6237;&#x63D0;&#x793A;&#x3002;&#x4F8B;&#x5982;&#xFF1A;Input&#x7EC4;&#x4EF6;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x8F93;&#x5165;&#x2018;123456&#x2019;&#xFF0C;&#x5F00;&#x542F;&#x5C4F;&#x5E55;&#x9605;&#x8BFB;&#x53BB;&#x4F1A;&#x63D0;&#x793A;&#xFF1A;&#x201C;&#x60A8;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x4E3A;:123456&#x5171;6&#x5B57;&#x7B26;&#x201D;&#x3002;&#x5F53;&#x7528;&#x6237;&#x5220;&#x9664;&#x5B8C;&#x6240;&#x6709;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x5219;&#x63D0;&#x793A;&#xFF1A;&#x201C;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BF7;&#x8F93;&#x5165;&#x6709;&#x6548;&#x5B57;&#x7B26;&#x201C;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x6839;&#x636E;Fusion&#x4E0E;&#x65E0;&#x969C;&#x969C;&#x7ED3;&#x5408;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x8BF7;&#x53C2;&#x8003;&#x5982;&#x4E0B;&#xFF0C;&#x5B8C;&#x6574;demo&#x8BF7;<a href="https://codesandbox.io/s/6xz4zj9pxn" target="_blank">&#x70B9;&#x51FB;&#x6B64;&#x5904;</a>&#x3002;</p>
+<pre><code class="lang-js">state = {
+    size: <span class="hljs-string">&apos;medium&apos;</span>,
+    textTip: <span class="hljs-string">&apos;&apos;</span>
+}
+
+changeHandle = (v, event)=&gt;{
+    <span class="hljs-keyword">const</span> sign = event.target.name || event.target.id
+    <span class="hljs-keyword">if</span>(sign &amp;&amp; [<span class="hljs-string">&apos;username&apos;</span>, <span class="hljs-string">&apos;remark&apos;</span>].includes(sign)) { 
+        <span class="hljs-keyword">if</span>(!v) { 
+            <span class="hljs-keyword">this</span>.setState({textTip: <span class="hljs-string">&apos;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BF7;&#x8F93;&#x5165;&#x6709;&#x6548;&#x5B57;&#x7B26;&apos;</span>});
+        }<span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">const</span> ariaText = <span class="hljs-string">&apos;&#x60A8;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x4E3A;:&apos;</span> + (!v ? <span class="hljs-string">&quot;&quot;</span>: v) + <span class="hljs-string">&apos;&#x5171;&apos;</span> + (!v ? <span class="hljs-number">0</span> : v.length) + <span class="hljs-string">&apos;&#x5B57;&#x7B26;&apos;</span>;
+            <span class="hljs-keyword">this</span>.setState({textTip: ariaText});
+        }
+    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(sign &amp;&amp; sign === <span class="hljs-string">&apos;password&apos;</span>) { 
+        <span class="hljs-keyword">if</span>(!v) { 
+            <span class="hljs-keyword">this</span>.setState({textTip: <span class="hljs-string">&quot;&#x5BC6;&#x7801;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BF7;&#x8F93;&#x5165;&#x6709;&#x6548;&#x5B57;&#x7B26;&quot;</span>});
+        }<span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">const</span> ariaText = <span class="hljs-string">&apos;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x5171;&apos;</span> + (!v ? <span class="hljs-number">0</span> : v.length) + <span class="hljs-string">&apos;&#x5B57;&#x7B26;&apos;</span>;
+            <span class="hljs-keyword">this</span>.setState({textTip: ariaText});
+        }
+    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(event.target.type == <span class="hljs-string">&apos;checkbox&apos;</span>){
+        <span class="hljs-keyword">const</span> ariaText = (v.length === <span class="hljs-number">0</span>) ? <span class="hljs-string">&quot;&#x60A8;&#x6CA1;&#x6709;&#x9009;&#x62E9;&#x8BED;&#x8A00;&quot;</span> : (<span class="hljs-string">&quot;&#x60A8;&#x9009;&#x62E9;&#x7684;&#x8BED;&#x8A00;&#x4E3A;:&quot;</span> + v.join(<span class="hljs-string">&apos;,&apos;</span>));
+        <span class="hljs-keyword">this</span>.setState({textTip: ariaText});
+    }
+}
+
+&lt;Form {...formItemLayout} size={<span class="hljs-keyword">this</span>.state.size} style={{maxWidth: <span class="hljs-string">&apos;500px&apos;</span>}}&gt;
+    &lt;FormItem 
+        required 
+        label=&quot;username:&quot;
+        aria-describedby=&quot;aria&quot;    
+    &gt;
+        &lt;Input  placeholder=&quot;Please enter your user name&quot; id=&quot;username&quot; name=&quot;username&quot;   onChange={ this.changeHandle }   /&gt;
     &lt;/FormItem&gt;
 
-    &lt;FormItem label=&quot; &quot;&gt;
-        &lt;span id=&quot;inputInfo&quot; aria-live=&quot;polite&quot;&gt;
-        &#x5DF2;&#x8F93;&#x5165;&#x5B57;&#x7B26;:
+    &lt;FormItem
+        required 
+        label=&quot;Password:&quot;
+        aria-describedby=&quot;aria&quot;
+    &gt;
+        &lt;Input htmlType=&quot;password&quot;  placeholder=&quot;Please enter your password&quot; id=&quot;password&quot; name=&quot;password&quot; onChange={ this.changeHandle }/&gt;
+    &lt;/FormItem&gt;
+
+    &lt;FormItem wrapperCol={{ offset: 2 }} label=&quot; &quot;&gt;
+        &lt;span id=&quot;aria&quot; aria-live=&quot;polite&quot;&gt;
+            &lt;span aria-label={this.state.textTip} /&gt;
         &lt;/span&gt;
+
+        &lt;Form.Submit
+            validate
+            type=&quot;primary&quot;
+            onClick={this.submitHandle}
+            style={{ marginRight: 4 }}
+        &gt;
+            Submit
+        &lt;/Form.Submit&gt;
+
+        &lt;Form.Reset style={{ marginLeft: 100 }}&gt;Reset&lt;/Form.Reset&gt;
     &lt;/FormItem&gt;
 &lt;/Form&gt;
 </code></pre>
@@ -560,7 +638,7 @@ There is 3 characters.
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3. 异步内容的更新及提醒","level":"1.3.4.3","depth":3,"next":{"title":"4. 焦点管理","level":"1.3.4.4","depth":3,"path":"part2/content-creation-link/page4.md","ref":"./part2/content-creation-link/page4.md","articles":[]},"previous":{"title":"2. 元素的隐藏","level":"1.3.4.2","depth":3,"path":"part2/content-creation-link/page2.md","ref":"./part2/content-creation-link/page2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-fontsettings"],"root":"./site/zh-cn/a11y","styles":{"website":"style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/alibaba-fusion/next"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"fuson gitbook","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"part2/content-creation-link/page3.md","mtime":"2019-04-28T03:15:00.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T03:49:49.311Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3. 异步内容的更新及提醒","level":"1.3.4.3","depth":3,"next":{"title":"4. 焦点管理","level":"1.3.4.4","depth":3,"path":"part2/content-creation-link/page4.md","ref":"./part2/content-creation-link/page4.md","articles":[]},"previous":{"title":"2. 元素的隐藏","level":"1.3.4.2","depth":3,"path":"part2/content-creation-link/page2.md","ref":"./part2/content-creation-link/page2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-fontsettings"],"root":"./site/zh-cn/a11y","styles":{"website":"style/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/alibaba-fusion/next"},"fontsettings":{"theme":"night","family":"sans","size":2},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"fuson gitbook","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"part2/content-creation-link/page3.md","mtime":"2019-04-16T03:10:37.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T07:33:34.107Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
