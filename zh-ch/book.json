@@ -1,6 +1,7 @@
 {
     "title" : "fuson gitbook",
     "root":"./a11y",
+    "language" : "zh-hans",
     "links": {
         "sidebar": {
             "切换英文": "https://nianxiongdi.github.io/forbook1/en-us/"
@@ -17,6 +18,7 @@
     },
     "plugins": [ 
         "github",
+        "versions-select",
         "-fontsettings"
     ],
     "pluginsConfig": {
@@ -27,6 +29,18 @@
             "theme": "white",  
             "family": "sans", 
             "size": 2 
+        },
+        "versions": {
+            "options": [
+                {
+                    "value": "https://nianxiongdi.github.io/forbook1/zh-ch/",
+                    "text": "中文"
+                },
+                {
+                    "value": "https://nianxiongdi.github.io/forbook1/us-en/",
+                    "text": "英文"
+                }
+            ]
         }
     }
 }
