@@ -19,7 +19,6 @@
     },
     "plugins": [ 
         "github",
-        "versions-select",
         "-fontsettings"
     ],
     "pluginsConfig": {
@@ -30,18 +29,6 @@
             "theme": "white",  
             "family": "sans", 
             "size": 2 
-        },
-        "versions": {
-            "options": [
-                {
-                    "value": "https://nianxiongdi.github.io/forbook1/zh-ch/",
-                    "text": "中文"
-                },
-                {
-                    "value": "https://nianxiongdi.github.io/forbook1/en-us/",
-                    "text": "英文"
-                }
-            ]
-        }
+        }        
     }
 }
