@@ -1,0 +1,33 @@
+{
+    "title" : "fuson gitbook",
+    "root":"./a11y",
+    "links": {
+        "sidebar": {
+            "Switch Chinese": "https://www.baidu.com"
+        },
+        "gitbook": false,
+        "sharing": {
+          "google": false,
+          "facebook": false,
+          "twitter": false,
+          "all": false
+        }
+    },
+    "styles": {
+        "website": "style/website.css"
+    },
+    "plugins": [ 
+        "github",
+        "-fontsettings"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/alibaba-fusion/next"
+        },
+        "fontsettings": {
+            "theme": "white",  
+            "family": "sans", 
+            "size": 2 
+        }
+    }
+}
