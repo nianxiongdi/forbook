@@ -3,12 +3,11 @@
     "root":"./a11y",
     "links": {
         "sidebar": {
-            "切换英文": "https://www.baidu.com"
+            "切换英文": "https://nianxiongdi.github.io/forbook1/en-us/"
         },
         "gitbook": false,
         "sharing": {
           "google": false,
-          "facebook": false,
           "twitter": false,
           "all": false
         }
