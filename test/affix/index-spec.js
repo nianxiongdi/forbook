@@ -7,7 +7,7 @@ import Button from '../../src/button';
 import Affix from '../../src/affix/index';
 
 Enzyme.configure({ adapter: new Adapter() });
-
+  
 /* eslint-disable react/jsx-filename-extension, react/no-multi-comp, react/prop-types, react/prefer-stateless-function */
 /* global describe, it, beforeEach, afterEach */
 
@@ -22,7 +22,7 @@ class AffixDemo extends React.Component {
 
     changeOffset() {
         const { offsetTop } = this.state;
-        this.setState({
+        this.setState({ 
             offsetTop: offsetTop + 10,
         });
     }
